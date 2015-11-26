@@ -6,8 +6,8 @@ import os
 
 from pymongo import MongoClient
 
-from controller.web import *
-from controller.apiHandler import *
+from handlers.web import *
+from handlers.apiHandler import *
 from tornado.options import define, options
 
 define("port", default=2358, help="run on the given port", type=int)
