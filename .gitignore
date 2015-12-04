@@ -2,3 +2,4 @@ tags
 *.pyc
 *.swp
 *.swo
+*_env
