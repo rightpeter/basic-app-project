@@ -1,1 +1,10 @@
-tornado
+backports-abc==0.4
+backports.ssl-match-hostname==3.4.0.2
+certifi==2015.11.20.1
+easydict==1.6
+greenlet==0.4.9
+mongoengine==0.10.5
+pymongo==3.1.1
+singledispatch==3.4.0.3
+six==1.10.0
+tornado==4.3
