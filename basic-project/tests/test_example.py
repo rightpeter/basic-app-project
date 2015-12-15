@@ -1,4 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 import unittest
+
 
 class TestStringMethods(unittest.TestCase):
 
@@ -19,6 +27,7 @@ class TestStringMethods(unittest.TestCase):
         with self.assertRaises(TypeError):
             s.split(2)
 
+
 def suite():
     """
         Test suite
@@ -30,4 +39,4 @@ def suite():
     return suite
 
 if __name__ == "__main__":
-    unittest.main(defaultTest = 'suite')
+    unittest.main(defaultTest='suite')

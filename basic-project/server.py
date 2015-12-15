@@ -12,6 +12,7 @@ from tornado.options import define, options
 
 # app
 import settings
+import torndb
 from operations.routes import route
 from mongoengine.connection import connect
 
@@ -35,6 +36,10 @@ class Application(tornado.web.Application):
             webmaster=settings.WEBMASTER,
             admin_emails=settings.ADMIN_EMAILS,
         )
+        self.mysql_db = torndb.Connection(settings.MYSQL_HOST,
+                                          settings.MYSQL_TABLE_NAME,
+                                          settings.MYSQL_USER_NAME,
+                                          settings.MYSQL_PASS_WORD)
         tornado.web.Application.__init__(self, handlers, **server_settings)
 
 
